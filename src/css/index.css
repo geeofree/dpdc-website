@@ -1,0 +1,72 @@
+section.Banner {
+  background-image: url("/images/wave.svg");
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-size: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.25;
+}
+
+section.Banner > img {
+  height: 456px;
+}
+
+section.Banner > h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-top: -1.25em;
+  margin-bottom: 0.25em;
+}
+
+section.Banner > p {
+  font-size: 1.25em;
+  text-align: center;
+  color: #333;
+  max-width: 456px;
+}
+
+section.Staff {
+  padding: 4em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+section.Staff > img {
+  width: 50%;
+}
+
+section.Staff > div {
+  max-width: 32em;
+}
+
+section.Staff > div > h1 {
+  margin-bottom: 1em;
+}
+
+section.Staff > div > p {
+  margin-bottom: 1em;
+  color: #333;
+}
+
+
+section.BusinessInfo {
+  padding: 4em;
+}
+
+section.BusinessInfo > div > h1 {
+  margin-bottom: 0.5em;
+}
+
+section.BusinessInfo > div > p {
+  margin-bottom: 1em;
+  color: #333;
+}
+
+section.BusinessInfo > div > p > span {
+  display: block;
+}
