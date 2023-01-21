@@ -3,21 +3,13 @@
   "version": "1.0.0",
   "description": "Divine Providence Dental Clinic Website",
   "scripts": {
-    "start": "npm-run-all -p dev:*",
-    "dev:server": "eleventy --serve",
-    "dev:tailwind": "tailwindcss -i src/css/style.css -o dist/css/style.css -w --postcss",
-    "build": "npm-run-all -p prod:*",
-    "prod:server": "NODE_ENV=production eleventy",
-    "prod:tailwind": "tailwindcss -i src/css/style.css -o dist/css/style.css -m"
+    "start": "eleventy --serve",
+    "build": "NODE_ENV=production eleventy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2",
-    "autoprefixer": "^10.4.13",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.4"
+    "@11ty/eleventy": "^1.0.2"
   }
 }

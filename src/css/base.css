@@ -1,0 +1,85 @@
+:root {
+  --header-height: 4em;
+  --header-border: #e7e7e7;
+  --header-text-logo: #5aaccc;
+  --text: #5b5b5b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+	font-family: "Inter",
+		-apple-system,BlinkMacSystemFont,
+		"Avenir Next",
+		Avenir,
+		"Nimbus Sans L",
+		Roboto,
+		"Noto Sans",
+		"Segoe UI",
+		Arial,Helvetica,
+		"Helvetica Neue",
+		sans-serif;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+header.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  border-bottom: 1px solid var(--header-border);
+  z-index: 10;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header.Header > a {
+  color: var(--header-text-logo);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 100%;
+  padding: 0.5em;
+}
+
+header.Header > a > img {
+  border-right: 1px solid #e7e7e7;
+  margin-right: 0.5em;
+  width: 64px;
+}
+
+header.Header > a > h1 {
+  font-size: 1.05em;
+}
+
+header.Header > nav {
+  height: 100%;
+  display: flex;
+  padding-right: 0.5em;
+}
+
+header.Header > nav > a {
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  padding: 0.5em;
+  color: var(--header-text-logo);
+}
+
+header.Header > nav > a.ContactUs > span {
+  padding: 0.5em;
+  border-radius: 24px;
+  background-color: var(--header-text-logo);
+  color: white;
+}

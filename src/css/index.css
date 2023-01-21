@@ -1,0 +1,48 @@
+section.Hero {
+  margin-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  background-image: url('/images/hero.png');
+  background-size: cover;
+  background-position: center;
+  padding: 2em;
+}
+
+section.Hero > div {
+  color: white;
+}
+
+section.Hero > div > h1 {
+  font-size: 3rem;
+  max-width: 30rem;
+}
+
+section.Hero > div > p {
+  max-width: 30rem;
+  font-size: 1.2em;
+  color: var(--header-border);
+}
+
+section.Staff {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  padding: 4em;
+}
+
+section.Staff > img {
+  width: 100%;
+}
+
+section.Staff > div {
+  color: var(--text);
+}
+
+section.Staff > div > h1 {
+  color: black;
+  margin-bottom: 0.5em;
+}
+
+section.Staff > div > p:not(:last-of-type) {
+  margin-bottom: 0.5em;
+}

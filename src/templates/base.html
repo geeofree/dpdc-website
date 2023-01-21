@@ -39,9 +39,26 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <link rel="manifest" href="/images/site.webmanifest">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/base.css">
+		{% if css %}<link rel="stylesheet" href="/css/{{ css }}">{% endif %}
 	</head>
 	<body>
+    <header class="Header">
+      <a href="/">
+        <img src="images/dpdc-logo.png" alt="DPDC Logo">
+        <h1>
+          D I V I N E&nbsp;&nbsp;P R O V I D E N C E
+        </h1>
+      </a>
+      <nav>
+        {%- for section in collections.sections -%}
+        <a href="{{ section.path }}">{{ section.label }}</a>
+        {%- endfor %}
+        <a href="#contact-us" class="ContactUs">
+          <span>CONTACT US</span>
+        </a>
+      </nav>
+    </header>
 		<main>{{ content }}</main>
 		{% if js %}<script src="/js/{{ js }}"></script>{% endif %}
 	</body>
