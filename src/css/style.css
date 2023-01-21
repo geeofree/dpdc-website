@@ -3,5 +3,15 @@
 @tailwind utilities;
 
 * {
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
-};
+	font-family: "Inter",
+		-apple-system,BlinkMacSystemFont,
+		"Avenir Next",
+		Avenir,
+		"Nimbus Sans L",
+		Roboto,
+		"Noto Sans",
+		"Segoe UI",
+		Arial,Helvetica,
+		"Helvetica Neue",
+		sans-serif;
+}

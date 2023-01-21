@@ -6,7 +6,9 @@
     "start": "npm-run-all -p dev:*",
     "dev:server": "eleventy --serve",
     "dev:tailwind": "tailwindcss -i src/css/style.css -o dist/css/style.css -w --postcss",
-    "build": "NODE_ENV=production npx @11ty/eleventy"
+    "build": "npm-run-all -p prod:*",
+    "prod:server": "NODE_ENV=production eleventy",
+    "prod:tailwind": "tailwindcss -i src/css/style.css -o dist/css/style.css -m"
   },
   "keywords": [],
   "author": "",
