@@ -1,6 +1,6 @@
 const path = require('path');
 
-const SECTIONS = ['HOME', 'STAFF'];
+const SECTIONS = ['HOME', 'STAFF', 'SERVICES'];
 
 module.exports = (eleventyConfig) => {
   // Passthroughs

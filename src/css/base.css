@@ -2,7 +2,8 @@
   --header-height: 4em;
   --header-border: #e7e7e7;
   --header-text-logo: #5aaccc;
-  --text: #5b5b5b;
+  --text: #474747;
+  --z-1: 10;
 }
 
 * {

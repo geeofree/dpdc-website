@@ -5,6 +5,7 @@ order: 1
 title: DPDC Olongapo
 description: Divine Providence Dental Clinic - A dental clinic based in Olongapo.
 css: index.css
+js: index.js
 ---
 
 <section id="home" class="Hero">
@@ -35,19 +36,21 @@ css: index.css
   </div>
 </section>
 
-<!-- <section class="grid grid-cols-2 p-4 py-16"> -->
-<!--   <div class="pl-32"> -->
-<!--     <h1 class="text-2xl">Visit Us!</h1> -->
-<!--     <p class="flex flex-col text-gray-700"> -->
-<!--       <span>#465 DCE Building,</span> -->
-<!--       <span>Olongapo City, Zambales,</span> -->
-<!--       <span>Philippines</span> -->
-<!--     </p> -->
-<!--     <h1 class="text-2xl mt-4">Clinic Hours</h1> -->
-<!--     <p class="flex flex-col text-gray-700"> -->
-<!--       <span>Tuesday to Saturday</span> -->
-<!--       <span>10AM to 5PM</span> -->
-<!--     </p> -->
-<!--   </div> -->
-<!--   <img src="images/dpdc-location.jpg" alt="DPDC Clinic (Outside)" class="rounded-md shadow-gray-700 shadow"> -->
-<!-- </section> -->
+<section id="services" class="Services">
+  <div class="ServicesList">
+    <h1>Services</h1>
+    <ul>
+      {%- for service in services -%}
+      <li>{{ service }}</li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  <div class="ServicesExamples">
+    <img src="images/procedures/sample1.jpeg">
+    <img src="images/procedures/sample2.jpeg">
+    <img src="images/procedures/sample3.jpeg">
+    <img src="images/procedures/sample4.jpeg">
+    <img src="images/procedures/sample5.jpeg">
+    <img src="images/procedures/sample6.jpeg">
+  </div>
+</section>
