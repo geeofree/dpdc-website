@@ -72,7 +72,7 @@ section.Services > div.ServicesList > ul > li:not(:last-of-type) {
 section.Services > div.ServicesExamples {
   position: relative;
   width: 100%;
-  height: 640px;
+  height: 48em;
 }
 
 section.Services > div.ServicesExamples > img {
