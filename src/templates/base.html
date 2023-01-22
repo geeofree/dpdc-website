@@ -41,9 +41,11 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/css/base.css">
 		{% if css %}<link rel="stylesheet" href="/css/{{ css }}">{% endif %}
+    <!-- JavaScript -->
+    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
 	</head>
 	<body>
-    <header class="Header">
+    <header class="Header" x-data="{ open: false }">
       <a href="/">
         <img src="images/dpdc-logo.webp" alt="DPDC Logo">
         <h1>
@@ -58,6 +60,20 @@
           <span>CONTACT US</span>
         </a>
       </nav>
+      <button type="button" x-on:click="open = true">
+        <img src="images/menu-icon.svg">
+      </button>
+      <aside x-show="open" x-on:click="open = false" x-transition>
+        <nav>
+          <h1>Go To:</h1>
+          {%- for section in collections.sections -%}
+          <a @click.stop="open = false" href="{{ section.path }}">{{ section.label }}</a>
+          {%- endfor %}
+          <a href="#contact-us" class="ContactUs">
+            <span>CONTACT US</span>
+          </a>
+        </nav>
+      </aside>
     </header>
 		<main>{{ content }}</main>
 		{% if js %}<script src="/js/{{ js }}"></script>{% endif %}
