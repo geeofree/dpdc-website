@@ -55,7 +55,6 @@ header.Header > a {
 header.Header > a > img {
   border-right: 1px solid #e7e7e7;
   margin-right: 0.5em;
-  width: 64px;
 }
 
 header.Header > a > h1 {

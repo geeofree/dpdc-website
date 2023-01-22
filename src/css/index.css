@@ -3,7 +3,7 @@ section.Hero {
   min-height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
-  background-image: url('/images/hero.png');
+  background-image: url('/images/hero.webp');
   background-size: cover;
   background-position: center;
   padding: 2em;
