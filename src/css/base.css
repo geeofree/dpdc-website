@@ -62,8 +62,9 @@ header.Header > a > h1 {
 }
 
 header.Header > nav {
+  display: none;
+  /* display: flex; */
   height: 100%;
-  display: flex;
   padding-right: 0.5em;
 }
 
@@ -82,4 +83,10 @@ header.Header > nav > a.ContactUs > span {
   border-radius: 24px;
   background-color: var(--header-text-logo);
   color: white;
+}
+
+@media (min-width: 768px) {
+  header.Header > nav {
+    display: flex;
+  }
 }

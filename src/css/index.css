@@ -26,11 +26,11 @@ section.Hero > div > p {
 
 section.Staff {
   display: grid;
-  grid-template-columns: 50% 1fr;
-  padding: 4em;
+  padding: 1em;
 }
 
 section.Staff > img {
+  grid-row-start: 2;
   width: 100%;
 }
 
@@ -49,12 +49,15 @@ section.Staff > div > p:not(:last-of-type) {
 
 section.Services {
   display: grid;
-  grid-template-columns: 1fr 50%;
-  padding: 4em;
+  padding: 1em;
 }
 
 section.Services > div > h1 {
   margin-bottom: 0.5em;
+}
+
+section.Services > div.ServicesList {
+  margin-bottom: 2em;
 }
 
 section.Services > div.ServicesList > ul {
@@ -85,4 +88,20 @@ section.Services > div.ServicesExamples > img {
 section.Services > div.ServicesExamples > img.visible {
   visibility: visible;
   opacity: 1;
+}
+
+@media (min-width: 768px) {
+  section.Staff, section.Services {
+    grid-template-columns: 50% 1fr;
+    padding: 2em;
+  }
+  section.Staff > img {
+    grid-row-start: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  section.Staff, section.Services {
+    padding: 4em;
+  }
 }
