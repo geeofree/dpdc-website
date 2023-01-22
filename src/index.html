@@ -5,7 +5,6 @@ order: 1
 title: DPDC Olongapo
 description: Divine Providence Dental Clinic - A dental clinic based in Olongapo.
 css: index.css
-js: index.js
 ---
 
 <section id="home" class="Hero">
@@ -45,12 +44,44 @@ js: index.js
       {%- endfor -%}
     </ul>
   </div>
-  <div class="ServicesExamples">
-    <img src="images/procedures/sample1.webp">
-    <img src="images/procedures/sample2.webp">
-    <img src="images/procedures/sample3.webp">
-    <img src="images/procedures/sample4.webp">
-    <img src="images/procedures/sample5.webp">
-    <img src="images/procedures/sample6.webp">
+  <div
+    class="ServicesExamples"
+    x-data="{
+      images: [
+        'images/procedures/sample1.webp',
+        'images/procedures/sample2.webp',
+        'images/procedures/sample3.webp',
+        'images/procedures/sample4.webp',
+        'images/procedures/sample5.webp',
+        'images/procedures/sample6.webp',
+      ],
+      visibleIndex: 0,
+      delay: 5000,
+      timer: null,
+      startSlide() {
+        this.timer = setInterval(() => {
+          this.visibleIndex  = (this.visibleIndex + 1) % this.images.length;
+        }, this.delay);
+      },
+      setSlideImage(index) {
+        this.visibleIndex = index;
+        clearInterval(this.timer);
+        this.startSlide();
+      },
+    }"
+    x-init="startSlide()"
+  >
+    <template x-for="(image, index) in images" :key="image">
+      <img x-bind:src="image" x-bind:class="visibleIndex === index ? 'visible' : ''">
+    </template>
+    <ul>
+      <template x-for="(image, index) in images" :key="image">
+        <li
+          x-bind:class="visibleIndex === index ? 'current' : ''"
+          @click="setSlideImage(index)"
+        >
+        </li>
+      </template>
+    </ul>
   </div>
 </section>
