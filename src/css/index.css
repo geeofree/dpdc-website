@@ -120,18 +120,70 @@ section.Services > div.ServicesExamples > ul > li:not(:last-of-type) {
   margin-right: 0.5em;
 }
 
+section.VisitUs {
+  display: grid;
+  padding: 1em;
+}
+
+section.VisitUs > div {
+  margin-bottom: 1em;
+}
+
+section.VisitUs > div > div {
+  margin-bottom: 1em;
+}
+
+section.VisitUs > div > div > h1 {
+  margin-bottom: 0.5em;
+}
+
+section.VisitUs > div > div > p {
+  display: grid;
+  row-gap: 0.5em;
+  color: var(--text);
+}
+
+section.VisitUs > div > ul {
+  display: flex;
+  list-style: none;
+}
+
+section.VisitUs > div > ul > li > a > img {
+  height: 2em;
+}
+
+section.VisitUs > div > ul > li:not(:last-of-type) {
+  margin-right: 0.5em;
+}
+
+section.VisitUs > div > h1 {
+  margin-bottom: 1em;
+}
+
+
+section.VisitUs > img {
+  grid-row-start: 2;
+  width: 100%;
+  border-radius: 8px;
+}
+
 @media (min-width: 768px) {
-  section.Staff, section.Services {
+  section.Staff, section.Services, section.VisitUs {
     grid-template-columns: 50% 1fr;
     padding: 2em;
   }
-  section.Staff > img {
+
+  section.Staff > img, section.VisitUs > img {
     grid-row-start: 1;
+  }
+
+  section.VisitUs > div {
+    padding-left: 2em;
   }
 }
 
 @media (min-width: 1024px) {
-  section.Staff, section.Services {
+  section.Staff, section.Services, section.VisitUs {
     padding: 4em;
   }
 }
