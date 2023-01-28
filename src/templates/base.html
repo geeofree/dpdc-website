@@ -22,13 +22,13 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ description }}">
-    <meta property="og:image" content="/images/thumbnail.png">
+    <meta property="og:image" content="/images/thumbnail.webp">
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ page.url }}">
     <meta name="twitter:title" content="{{ title }}">
     <meta name="twitter:description" content="{{ description }}">
-    <meta name="twitter:image" content="/images/thumbnail.png">
+    <meta name="twitter:image" content="/images/thumbnail.webp">
     <!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,8 +56,8 @@
         {%- for section in collections.sections -%}
         <a href="{{ section.path }}">{{ section.label }}</a>
         {%- endfor %}
-        <a href="#contact-us" class="ContactUs">
-          <span>CONTACT US</span>
+        <a href="#visit-us" class="VisitUs">
+          <span>VISIT US</span>
         </a>
       </nav>
       <button type="button" x-on:click="open = true">
@@ -69,8 +69,8 @@
           {%- for section in collections.sections -%}
           <a @click.stop="open = false" href="{{ section.path }}">{{ section.label }}</a>
           {%- endfor %}
-          <a href="#contact-us" class="ContactUs">
-            <span>CONTACT US</span>
+          <a href="#visit-us" class="VisitUs">
+            <span>VISIT US</span>
           </a>
         </nav>
       </aside>
